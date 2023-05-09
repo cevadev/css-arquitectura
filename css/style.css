@@ -1,0 +1,54 @@
+/*aplicamos estilos a todos elementos cuya clase inicie con box*/
+[class^="box"] {
+  margin: 3rem auto;
+  background-color: orangered;
+}
+/*caja fija*/
+.box {
+  width: 300px;
+  height: 300px;
+}
+
+/*caja flexible*/
+.box-flexible {
+  /*width 50% del contenedor padre*/
+  width: 50%;
+  /*height 20vh representa el 20% de la pantalla*/
+  height: 20vh;
+}
+
+.box-flexible-2 {
+  /*definios la maxima anchura a la que puede crecer*/
+  max-width: 960px;
+  min-width: 280px;
+
+  /*definimos la maxima altura a la que puede crecer*/
+  max-height: 480px;
+  min-height: 280px;
+}
+
+.box-flexible-3 {
+  /*la propiedades width y height tienen mayor jerarquias sobre min y max*/
+  width: 300px;
+  height: 300px;
+  /*definios la maxima anchura a la que puede crecer*/
+  max-width: 960px;
+  min-width: 280px;
+
+  /*definimos la maxima altura a la que puede crecer*/
+  max-height: 480px;
+  min-height: 280px;
+}
+
+.box-flexible-4 {
+  /*la propiedades width y height tienen mayor jerarquias sobre min y max*/
+  width: 50%;
+  height: 20vh;
+  /*definios la maxima anchura a la que puede crecer*/
+  max-width: 960px;
+  min-width: 280px;
+
+  /*definimos la maxima altura a la que puede crecer*/
+  max-height: 480px;
+  min-height: 280px;
+}
