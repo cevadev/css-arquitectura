@@ -213,12 +213,46 @@
       </code></pre>
         <h3>Imágenes Responsivas</h3>
         <p>Simplemente adaptamos la imagen al tamaño de su contenedor.</p>
+        <img src="img/puesta-sol.jpg" alt="puesta de sol" />
         <h4>Atributo <i>srcset</i> y <i>sizes</i></h4>
         <p>
           El propósito de estos atributos, es mejorar el rendimiento de carga,
           al colocar la misma imagen pero en diferentes tamaños y pesos,
           dependiendo del tamaño o la resolución de la pantalla.
         </p>
+        <img
+          src="img/html5-3d-600.png"
+          alt="HTML5"
+          srcset="
+            img/html5-3d-600.png  1x,
+            img/html5-3d-900.png  1.5x,
+            img/html5-3d-1200.png 2x
+          "
+        />
+        <br />
+        <!--dependiendo del ancho de la pantalla-->
+        <img
+          src="img/html5-3d-600.png"
+          alt="HTML5"
+          srcset="
+            img/html5-3d-600.png   600w,
+            img/html5-3d-900.png   900w,
+            img/html5-3d-1200.png 1200w
+          "
+        />
+        <br />
+        <!--Trabajando con el atributo size()-->
+        <img
+          src="img/html5-3d-600.png"
+          alt="HTML5"
+          srcset="
+            img/html5-3d-600.png   600w,
+            img/html5-3d-900.png   900w,
+            img/html5-3d-1200.png 1200w
+          "
+          sizes="(max-width:480px) 300px, (max-width:600px) 480px, (max-width:768px) 600px, 
+                 (max-width:1024px) 900px, (min-width:1200px) 1200px"
+        />
         <h4>Etiqueta <i>picture</i></h4>
         <p>
           El objetivo de esta etiqueta, no es sólo mostrar diferentes tamaños de

@@ -52,3 +52,9 @@
   max-height: 480px;
   min-height: 280px;
 }
+
+/*adaptamos las img al tamano del contenedor*/
+img {
+  max-width: 100%;
+  height: auto;
+}
