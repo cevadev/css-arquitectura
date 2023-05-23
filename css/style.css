@@ -53,8 +53,40 @@
   min-height: 280px;
 }
 
+/*img, iframe y video responsivo*/
 /*adaptamos las img al tamano del contenedor*/
-img {
+img,
+iframe,
+video {
   max-width: 100%;
   height: auto;
+}
+
+/*tecnica antigua para hacer responsive*/
+.responsive-media {
+  position: relative;
+  max-width: 100%;
+  height: 0;
+  /*Formato widescreen posee una resolucion de 16widht 9height (16:9)*/
+  /*16 .... 100%
+    9 ..... ?
+    (9*100)/16 = 56.25*/
+  padding-bottom: 56.25%;
+}
+
+/*dentro de responsive-media al elemento hijo directo aplicamos:
+  position: absolute. este elemento video cuyo padre es responsive-media que posee un position relative
+  por lo que se posiciona con respecto al contenedor padre que es responsive-media*/
+.responsive-media > * {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.aspect-ratio-16-9 {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-ratio-1-1 {
+  aspect-ratio: 1 / 1;
 }
