@@ -90,3 +90,75 @@ video {
 .aspect-ratio-1-1 {
   aspect-ratio: 1 / 1;
 }
+
+/*definimos estilos para imprimir*/
+@media print {
+  @page {
+    size: A5 landscape;
+  }
+
+  body {
+    font-size: 10pt;
+    font-family: sans-serif;
+    background-color: #000;
+    color: greenyellow;
+  }
+}
+
+/**/
+@media screen and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: auto;
+    scroll-behavior: smooth;
+  }
+}
+
+/*media query para modo dark o light*/
+@media screen and (prefers-color-scheme: dark) {
+  html {
+    background-color: black;
+    color: teal;
+  }
+}
+@media screen and (prefers-color-scheme: light) {
+  html {
+    background-color: white;
+    color: darkblue;
+  }
+}
+
+@media screen and (prefers-color-scheme: no-preferences) {
+  html {
+    background-color: white;
+    color: darkblue;
+  }
+}
+
+/*media queries clasicas*/
+/*si las media queries las empezamos con min-width entonces hay que usarlas asi en todo el sitio
+  pero si empezamos con max-width entonces hay que seguir usandola en todo el sitio
+  para evitar confunsiones con media queries que emplean min y max width en el sitio*/
+/*cuando la minima anchura sea 480px, es decir cuando el tamano de pantalla 480 o mas (hacia arriba)
+  aplica los estilos*/
+/*las media queries con min-width aplican la filosofia mobile-first
+  que significa que el valor que des, hacia arriba*/
+@media screen and (min-width: 480px) {
+  html {
+    background-color: lightpink;
+  }
+}
+
+/*max-width cuando la maxima anchura sea 1024 hacia abajo*/
+/*las media querie con max-width sigue la filosofia desktop-first
+  que significa que el valor que des, hacia abajo*/
+@media screen and (max-width: 1024px) {
+  html {
+    background-color: lightgreen;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  html {
+    background-color: white;
+  }
+}
