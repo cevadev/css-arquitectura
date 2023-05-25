@@ -1,0 +1,39 @@
+/*
+Grids 12 Columnas es muy divisible
+
+12/1 = 12
+12/2 = 6
+12/3 = 4
+12/4 = 3
+12/6 = 2
+12/12 = 1
+
+Ubicacion de elementos
+
+1 elemento ocupa 5 col y el segundo ocupa 7 col = 12 col
+1 elemento ocupa 2 col y el segundo ocupa 5 col y el tercero ocupa 5 col = 12 col
+1 elemento ocupa 4 col y el segundo ocupa 2 col y el tercero ocupa 3 col y el cuarto ocupa 3 col = 12 col
+
+La sumatori de los elementos que van a formar las columnas deben dar siempre 12
+
+Regla de 3 simple
+
+12 ----> 100%
+?col --> ???%
+*/
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
