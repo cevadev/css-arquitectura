@@ -162,3 +162,35 @@ video {
     background-color: white;
   }
 }
+
+/*aplicamos un feature query*/
+@supports (grid-template-columns: subgrid) {
+  html {
+    background-color: black;
+    color: greenyellow;
+  }
+}
+
+/*aplicamos estilos cuando el navegador NO soporta un feature*/
+@supports not (grid-template-columns: subgrid) {
+  html {
+    background-color: papayawhip;
+    color: green;
+  }
+}
+
+/*feature query utilizando and*/
+@supports (display: grid) and (grid-template-columns: subgrid) {
+  html {
+    background-color: white;
+    color: black;
+  }
+}
+
+/*feature query utilizando or*/
+@supports (display: grid) or (grid-template-columns: subgrid) {
+  html {
+    background-color: darkslateblue;
+    color: lightseagreen;
+  }
+}
