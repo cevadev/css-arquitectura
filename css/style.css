@@ -194,3 +194,17 @@ video {
     color: lightseagreen;
   }
 }
+
+/*fluid design*/
+.fluid-grid {
+  display: grid;
+  /*auto-fit -> dependiendo del # de hijos de la grid, sera el # de veces que se va a repetir
+    cada una de esta columnas
+    minmax -> nos da un valor maximo  un valor minimo*/
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.fluid-item {
+  border: thin solid gray;
+  padding: 1rem;
+}
