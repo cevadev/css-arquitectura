@@ -266,5 +266,10 @@ video {
   font-size: calc(12px + (24-12)*((100vw-200px) / (1600-200)));
   */
 body {
-  font-size: calc(14px + (18-14) * ((100vw - 300px) / (1400-300)));
+  /*font-size: calc(14px + (18-14) * ((100vw - 300px) / (1400-300)));*/
+}
+
+.box-fluid {
+  width: clamp(350px, 60vw, 600px);
+  height: clamp(200px, 30vh, 300px);
 }
